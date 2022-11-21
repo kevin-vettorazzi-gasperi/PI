@@ -1,28 +1,14 @@
 import React from 'react';
 import { Image, ScrollView, StatusBar, Text, TouchableOpacity } from "react-native";
-import { CustomInput } from '../../components/customInput';
-import { useForm } from 'react-hook-form'
 import {
     Container,
     ImagesContainer,
     ViewInputComponents,
     ViewInputs,
     TextSenha,
-  } from './styles'
+  } from './style'
 
-  const EMAIL_REGEX =
-  /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-.]+(?:\. [a-zA-Z0-9-]+)*$/
-
-  const {
-    control,
-    handleSubmit,
-    getValues,
-    formState: { errors },
- } = useForm({
-    defaultValues: { email: 'kevin6@email.com', password: 'senha1' },
- })
-
-export function SignIn () {
+export function Home () {
     return (
         <>
           <Container>
@@ -32,12 +18,10 @@ export function SignIn () {
                 backgroundColor={'transparent'}
               />
     
-
-             <TextSenha> Minha lista de afazeres</TextSenha>
               <ViewInputComponents>
-                
+                {/* <Image source={theme.icons.develfood} style={{ marginTop: -60 }} /> */}
                 <ViewInputs>
-                  <CustomInput
+                  {/* <CustomInput
                     image={require('../../assets/icons/E-mail.png')}
                     name="email"
                     placeholder="exemplo@email.com"
@@ -61,9 +45,9 @@ export function SignIn () {
                         message: 'senha precisa de 5 caracters no mínimo',
                       },
                     }}
-                  />
+                  /> */}
     
-                 
+                  <TextSenha>Esqueci minha senha</TextSenha>
 {/*     
                   <ButtonStandard
                     onPressed={handleSubmit(() => {
@@ -101,7 +85,10 @@ export function SignIn () {
                   </TouchableOpacity>
                 </ViewInputs>
               </ViewInputComponents>
-              
+              {/* <Image
+                source={require('../../assets/icons/backgroundSignIn.png')}
+                style={{ marginTop: -30 }}
+              /> */}
             </ScrollView>
           </Container>
         </>
